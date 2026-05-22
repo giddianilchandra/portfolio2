@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { OrnateCard } from '@/components/ui/OrnateCard'
-import { GoldText } from '@/components/ui/GoldText'
+import { RPGText } from '@/components/ui/RPGText'
 import { experiences, metrics } from '@/data/portfolio'
 
 export function ExperienceChronicle() {
@@ -15,7 +15,7 @@ export function ExperienceChronicle() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="section-label mb-3">// PROFESSIONAL HISTORY</p>
-          <GoldText text="CHRONICLE" as="h2" className="text-5xl md:text-6xl font-bold mb-4" />
+          <RPGText text="CHRONICLE" as="h2" className="text-5xl md:text-6xl font-bold mb-4 gold-shimmer" staggerDelay={55} />
           <div className="gold-divider max-w-xs mx-auto mt-4" />
         </div>
 

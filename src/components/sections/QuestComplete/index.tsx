@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ParticleField } from '@/components/ui/ParticleField'
-import { GoldText } from '@/components/ui/GoldText'
+import { RPGText } from '@/components/ui/RPGText'
 import { personalInfo } from '@/data/portfolio'
 
 export function QuestComplete() {
@@ -32,10 +32,11 @@ export function QuestComplete() {
           // QUEST COMPLETE
         </motion.p>
 
-        <GoldText
+        <RPGText
           text="READY FOR THE NEXT QUEST"
           as="h2"
-          className="text-4xl md:text-6xl font-bold mb-4 leading-tight"
+          className="text-4xl md:text-6xl font-bold mb-4 leading-tight gold-shimmer"
+          staggerDelay={42}
         />
 
         <motion.div

@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { GoldText } from '@/components/ui/GoldText'
+import { RPGText } from '@/components/ui/RPGText'
 import { certifications } from '@/data/portfolio'
 
 export function AchievementsVault() {
@@ -13,7 +13,7 @@ export function AchievementsVault() {
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <p className="section-label mb-3">// ACADEMIC & PROFESSIONAL</p>
-          <GoldText text="ACHIEVEMENTS & CREDENTIALS" as="h2" className="text-4xl md:text-5xl font-bold mb-4" />
+          <RPGText text="ACHIEVEMENTS & CREDENTIALS" as="h2" className="text-4xl md:text-5xl font-bold mb-4 gold-shimmer" staggerDelay={38} />
           <div className="gold-divider max-w-xs mx-auto mt-4" />
         </div>
 

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { GoldText } from '@/components/ui/GoldText'
+import { RPGText } from '@/components/ui/RPGText'
 import { projects } from '@/data/portfolio'
 
 export function MissionBriefings() {
@@ -13,7 +13,7 @@ export function MissionBriefings() {
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <p className="section-label mb-3">// OPERATION RECORDS</p>
-          <GoldText text="MISSION BRIEFINGS" as="h2" className="text-5xl md:text-6xl font-bold mb-4" />
+          <RPGText text="MISSION BRIEFINGS" as="h2" className="text-5xl md:text-6xl font-bold mb-4 gold-shimmer" staggerDelay={45} />
           <div className="gold-divider max-w-xs mx-auto mt-4" />
         </div>
 
