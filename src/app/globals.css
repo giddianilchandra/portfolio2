@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Nunito+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+
+:root {
+  --color-bg: #06080f;
+  --color-gold: #c9a227;
+  --color-gold-light: #e8c96a;
+  --color-teal: #4fc3f7;
+  --color-text: #f0e6d3;
+  --color-muted: #8a7f6e;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: auto;
+  background-color: #06080f;
+}
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+body {
+  background-color: #06080f;
+  color: #f0e6d3;
+  overflow-x: hidden;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #06080f; }
+::-webkit-scrollbar-thumb { background: rgba(201,162,39,0.3); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(201,162,39,0.6); }
+
+/* Selection */
+::selection { background: rgba(201,162,39,0.25); color: #f0e6d3; }
+
+/* Gold shimmer text */
+.gold-shimmer {
+  background: linear-gradient(90deg, #c9a227 0%, #e8c96a 30%, #fff8dc 50%, #e8c96a 70%, #c9a227 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 3s linear infinite;
+}
+
+/* Glass card */
+.glass-dark {
+  background: rgba(13, 18, 32, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201,162,39,0.2);
+}
+
+/* Ornate card with gold corner brackets */
+.ornate-card {
+  position: relative;
+  background: rgba(13, 18, 32, 0.8);
+  border: 1px solid rgba(201,162,39,0.2);
+}
+.ornate-card::before,
+.ornate-card::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: #c9a227;
+  border-style: solid;
+}
+.ornate-card::before {
+  top: -1px; left: -1px;
+  border-width: 2px 0 0 2px;
+}
+.ornate-card::after {
+  bottom: -1px; right: -1px;
+  border-width: 0 2px 2px 0;
+}
+
+/* Diagonal section clip */
+.clip-diagonal-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+}
+.clip-diagonal-top {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Gold border glow */
+.border-glow-gold {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* Scan lines overlay */
+.scan-lines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(201,162,39,0.012) 2px, rgba(201,162,39,0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Section label */
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: #c9a227;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Gold divider line */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a227, transparent);
+  opacity: 0.4;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .hide-mobile { display: none; }
+}
+
+/* Keyframes */
+@keyframes goldShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(201,162,39,0.25); }
+  50% { border-color: rgba(201,162,39,0.65); }
+}
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 8px rgba(201,162,39,0.4); }
+  50% { box-shadow: 0 0 24px rgba(201,162,39,0.9); }
+}
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
