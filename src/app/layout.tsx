@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       '6.8 years of automation expertise — Playwright, Selenium, Azure DevOps, AI-augmented testing.',
     type: 'website',
-    url: 'https://giddianilchandra.github.io/PortFolio2',
+    url: 'https://giddianilchandra.github.io/portfolio',
   },
   twitter: {
     card: 'summary_large_image',

@@ -51,7 +51,7 @@ export function HeroSection() {
     document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [])
 
-  const basePath = process.env.NODE_ENV === 'production' ? '/PortFolio2' : ''
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
   const resumeUrl = `${basePath}${personalInfo.resumeUrl}`
   const photoUrl  = `${basePath}/photo.jpeg`
 

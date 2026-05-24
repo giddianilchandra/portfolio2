@@ -41,7 +41,7 @@ export function Header() {
     setMobileOpen(false)
   }, [])
 
-  const basePath = process.env.NODE_ENV === 'production' ? '/PortFolio2' : ''
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
   const resumeUrl = `${basePath}${personalInfo.resumeUrl}`
 
   return (
@@ -56,7 +56,7 @@ export function Header() {
             style={{ display: 'flex', alignItems: 'center', gap: '10px', background: 'none', border: 'none', cursor: 'pointer', padding: 0, textDecoration: 'none' }}
           >
             <img
-              src={`${process.env.NODE_ENV === 'production' ? '/PortFolio2' : ''}/photo.jpeg`}
+              src={`${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}/photo.jpeg`}
               alt="Anil Chandra Giddi"
               style={{ width: '34px', height: '34px', borderRadius: '999px', objectFit: 'cover', objectPosition: 'center top', border: '1px solid rgba(79,140,255,0.35)', flexShrink: 0 }}
             />

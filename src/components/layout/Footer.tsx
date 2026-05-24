@@ -3,7 +3,7 @@
 import { personalInfo } from '@/data/portfolio'
 
 export function Footer() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/PortFolio2' : ''
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
   const resumeUrl = `${basePath}${personalInfo.resumeUrl}`
 
   return (
