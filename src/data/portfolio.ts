@@ -53,7 +53,7 @@ export const bootConfig: BootConfig = {
 
 export const metrics: Metric[] = [
   { label: 'Years Experience', value: 6, suffix: '.8', description: 'in software testing & automation' },
-  { label: 'Test Cases Automated', value: 3000, suffix: '+', description: 'across all projects' },
+  { label: 'Test Cases Automated', value: 1200, suffix: '+', description: 'across all projects' },
   { label: 'Automation Coverage', value: 90, suffix: '%', description: 'average achieved' },
   { label: 'Defects Detected', value: 500, suffix: '+', description: 'pre-production defects caught' },
 ]

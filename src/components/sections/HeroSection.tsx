@@ -48,7 +48,7 @@ export function HeroSection() {
   const scrollIndicatorOpacity = useTransform(scrollY, [0, 200], [1, 0])
 
   const handleScrollDown = useCallback(() => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [])
 
   const basePath = process.env.NODE_ENV === 'production' ? '/PortFolio2' : ''
@@ -113,11 +113,6 @@ export function HeroSection() {
 
           {/* Social links */}
           <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: 'var(--text-muted)' }}>
-            <a href={personalInfo.github} target="_blank" rel="noopener noreferrer"
-              style={{ color: 'var(--text-muted)', textDecoration: 'none', transition: 'color 0.2s' }}
-              onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
-            >GitHub ↗</a>
             <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer"
               style={{ color: 'var(--text-muted)', textDecoration: 'none', transition: 'color 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}
@@ -192,7 +187,7 @@ export function HeroSection() {
             </div>
             <div>
               <span style={{ display: 'block', color: 'var(--text-muted)', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Tests Written</span>
-              <span style={{ display: 'block', color: 'var(--text)' }}>3000+ automated</span>
+              <span style={{ display: 'block', color: 'var(--text)' }}>1200+ automated</span>
             </div>
             <div>
               <span style={{ display: 'block', color: 'var(--text-muted)', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>CI/CD</span>

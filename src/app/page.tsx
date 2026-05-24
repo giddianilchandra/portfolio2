@@ -6,7 +6,6 @@ import { ExperienceSection } from '@/components/sections/ExperienceSection'
 import { SkillsSection } from '@/components/sections/SkillsSection'
 import { ProjectsSection } from '@/components/sections/ProjectsSection'
 import { EducationSection } from '@/components/sections/EducationSection'
-import { AutomationSection } from '@/components/sections/AutomationSection'
 
 export default function HomePage() {
   return (
@@ -19,7 +18,6 @@ export default function HomePage() {
         <SkillsSection />
         <ProjectsSection />
         <EducationSection />
-        <AutomationSection />
       </main>
       <Footer />
     </>

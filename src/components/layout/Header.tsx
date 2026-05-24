@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useTheme } from '@/providers/ThemeProvider'
 import { personalInfo } from '@/data/portfolio'
 
 const NAV_LINKS = [
@@ -11,31 +10,9 @@ const NAV_LINKS = [
   { id: 'skills',     label: 'Skills' },
   { id: 'projects',   label: 'Projects' },
   { id: 'education',  label: 'Education' },
-  { id: 'automation', label: 'Automation' },
 ]
 
-function SunIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-      <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-    </svg>
-  )
-}
-
-function MoonIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
-  )
-}
-
 export function Header() {
-  const { theme, toggle } = useTheme()
   const [activeSection, setActiveSection] = useState<string>('hero')
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -78,6 +55,11 @@ export function Header() {
             onClick={() => scrollTo('hero')}
             style={{ display: 'flex', alignItems: 'center', gap: '10px', background: 'none', border: 'none', cursor: 'pointer', padding: 0, textDecoration: 'none' }}
           >
+            <img
+              src={`${process.env.NODE_ENV === 'production' ? '/PortFolio2' : ''}/photo.jpeg`}
+              alt="Anil Chandra Giddi"
+              style={{ width: '34px', height: '34px', borderRadius: '999px', objectFit: 'cover', objectPosition: 'center top', border: '1px solid rgba(79,140,255,0.35)', flexShrink: 0 }}
+            />
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
               <span style={{ fontWeight: 600, letterSpacing: '0.03em', color: 'var(--text)', fontSize: '15px' }}>
                 Anil Chandra Giddi
@@ -111,16 +93,6 @@ export function Header() {
             >
               Resume
             </a>
-
-            {/* Theme toggle */}
-            <button
-              onClick={toggle}
-              className="nav-link"
-              style={{ padding: '8px 10px' }}
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-            </button>
 
             {/* Mobile hamburger */}
             <button

@@ -10,16 +10,6 @@ export function Footer() {
         <span style={{ fontFamily: 'monospace', fontSize: '11px' }}>Built with Next.js · Framer Motion · Tailwind</span>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           <a
-            href={personalInfo.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'var(--text-muted)', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
-          >
-            GitHub
-          </a>
-          <a
             href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"

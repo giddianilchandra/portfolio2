@@ -12,9 +12,8 @@ import {
 
 const ACHIEVEMENTS = [
   { icon: '🤖', title: 'Automation Pioneer', year: '2019', desc: 'Built first automation framework from scratch' },
-  { icon: '⚡', title: 'CI/CD Master', year: '2023', desc: 'Azure DevOps pipeline architecture' },
-  { icon: '🧠', title: 'AI-Augmented Engineer', year: '2024', desc: 'LLM-assisted test generation' },
-  { icon: '🎯', title: '3000+ Tests Automated', year: '2024', desc: 'Across all projects combined' },
+  { icon: '🧠', title: 'AI-Augmented Engineer', year: '2026', desc: 'LLM-assisted test generation' },
+  { icon: '🎯', title: '1200+ Tests Automated', year: '2024', desc: 'Across all projects combined' },
   { icon: '📊', title: '90%+ Coverage', year: '2023', desc: 'Average automation coverage achieved' },
   { icon: '🛡️', title: 'Zero Critical Escapes', year: '2024', desc: '500+ defects caught pre-production' },
 ]
@@ -23,7 +22,7 @@ const CAREER_TIMELINE = [
   { year: '2019', label: 'SDET — Lincesoft' },
   { year: '2021', label: 'TAE — Signant' },
   { year: '2023', label: 'SE — M3BI/Zensar' },
-  { year: '2024', label: 'AI-Augmented QA' },
+  { year: '2026', label: 'AI-Augmented QA' },
 ]
 
 export function EducationSection({ onBack }: { onBack?: () => void }) {

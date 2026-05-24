@@ -74,7 +74,6 @@ export function AboutSection({ onBack }: { onBack?: () => void }) {
               {[
                 { label: `✉ ${personalInfo.email}`, href: `mailto:${personalInfo.email}` },
                 { label: 'in LinkedIn', href: personalInfo.linkedin },
-                { label: '⌥ GitHub', href: personalInfo.github },
               ].map(item => (
                 <a key={item.label} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer"
                   style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 14px', borderRadius: '999px', border: '1px solid var(--border-soft)', color: 'var(--text-muted)', textDecoration: 'none', fontSize: '13px', transition: 'all 0.25s ease' }}
