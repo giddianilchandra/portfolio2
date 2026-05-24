@@ -19,7 +19,7 @@ export function Footer() {
           {/* Arrow */}
           <div style={{ fontSize: '22px', color: 'var(--accent)', margin: '12px 0 32px', opacity: 0.7 }}>↓</div>
 
-          {/* Resume + Email row */}
+          {/* Resume + Email + LinkedIn row */}
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '16px', marginBottom: '40px' }}>
             {/* Resume download */}
             <a
@@ -48,19 +48,26 @@ export function Footer() {
               {personalInfo.email}
               <span style={{ fontSize: '16px' }}>→</span>
             </a>
-          </div>
 
-          {/* LinkedIn */}
-          <a
-            href={personalInfo.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
-          >
-            LinkedIn ↗
-          </a>
+            {/* LinkedIn */}
+            <a
+              href={personalInfo.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
+                padding: '14px 28px', borderRadius: '999px',
+                border: '1px solid var(--border-soft)',
+                color: 'var(--text)', textDecoration: 'none', fontSize: '14px',
+                transition: 'all 0.25s ease',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(79,140,255,0.4)'; e.currentTarget.style.color = 'var(--accent)' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border-soft)'; e.currentTarget.style.color = 'var(--text)' }}
+            >
+              LinkedIn
+              <span style={{ fontSize: '16px' }}>→</span>
+            </a>
+          </div>
         </div>
       </div>
 
