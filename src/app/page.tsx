@@ -1,21 +1,27 @@
-'use client'
-
-import { Hero } from '@/components/sections/Hero'
-import { ExperienceChronicle } from '@/components/sections/ExperienceChronicle'
-import { SkillsCodex } from '@/components/sections/SkillsCodex'
-import { MissionBriefings } from '@/components/sections/MissionBriefings'
-import { AchievementsVault } from '@/components/sections/AchievementsVault'
-import { QuestComplete } from '@/components/sections/QuestComplete'
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
+import { HeroSection } from '@/components/sections/HeroSection'
+import { AboutSection } from '@/components/sections/AboutSection'
+import { ExperienceSection } from '@/components/sections/ExperienceSection'
+import { SkillsSection } from '@/components/sections/SkillsSection'
+import { ProjectsSection } from '@/components/sections/ProjectsSection'
+import { EducationSection } from '@/components/sections/EducationSection'
+import { AutomationSection } from '@/components/sections/AutomationSection'
 
 export default function HomePage() {
   return (
-    <main className="relative bg-background text-text-primary">
-      <Hero />
-      <ExperienceChronicle />
-      <SkillsCodex />
-      <MissionBriefings />
-      <AchievementsVault />
-      <QuestComplete />
-    </main>
+    <>
+      <Header />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <EducationSection />
+        <AutomationSection />
+      </main>
+      <Footer />
+    </>
   )
 }

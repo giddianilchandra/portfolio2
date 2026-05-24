@@ -1,3 +1,22 @@
+export type SectionId =
+  | 'about'
+  | 'skills'
+  | 'projects'
+  | 'education'
+  | 'experience'
+  | 'tools'
+  | 'cases'
+  | 'contact'
+
+export interface MenuItem {
+  id: SectionId
+  command: string
+  label: string
+  description: string
+  icon: string
+  levelReq: number
+}
+
 export interface PersonalInfo {
   name: string
   email: string
@@ -5,8 +24,8 @@ export interface PersonalInfo {
   linkedin: string
   location: string
   currentRole: string
-  taglines: string[]
   resumeUrl: string
+  taglines: string[]
 }
 
 export interface StatusPanel {
@@ -51,7 +70,7 @@ export interface SkillCategory {
   icon: string
   skills: string[]
   proficiency: number
-  color: 'cyan' | 'purple'
+  color: 'cyan' | 'purple' | 'orange'
 }
 
 export interface CiStage {
@@ -91,7 +110,7 @@ export interface DefectStep {
   statusColor: 'red' | 'yellow' | 'cyan' | 'green'
 }
 
-export type BadgeColor = 'cyan' | 'purple' | 'gold'
+export type BadgeColor = 'cyan' | 'purple' | 'orange'
 
 export interface Certification {
   id: string
@@ -102,4 +121,12 @@ export interface Certification {
   badgeColor: BadgeColor
   skills: string[]
   type: 'certification' | 'education'
+}
+
+export interface Tool {
+  name: string
+  category: string
+  proficiency: number
+  icon: string
+  color: string
 }
