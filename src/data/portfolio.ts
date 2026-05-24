@@ -19,7 +19,7 @@ export const personalInfo: PersonalInfo = {
   linkedin: 'https://www.linkedin.com/in/anilchandra-giddi-a6303b224/',
   location: 'Hyderabad, India',
   currentRole: 'Software Development Engineer in Testing (SDET)',
-  resumeUrl: '/portfolio/resume.pdf',
+  resumeUrl: '/resume.pdf',
   taglines: [
     'SDET | 6.8 Years Experience',
     'Test Automation Engineer',
