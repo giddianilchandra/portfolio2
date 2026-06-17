@@ -16,7 +16,7 @@ export const personalInfo: PersonalInfo = {
   name: 'Anil Chandra Giddi',
   email: 'giddianilchandra@gmail.com',
   github: 'https://github.com/giddianilchandra',
-  linkedin: 'https://www.linkedin.com/in/anilchandra-giddi-a6303b224/',
+  linkedin: 'https://www.linkedin.com/in/anilchandra-giddi/',
   location: 'Hyderabad, India',
   currentRole: 'Software Development Engineer in Testing (SDET)',
   resumeUrl: '/resume.pdf',
